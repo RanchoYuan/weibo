@@ -1,0 +1,21 @@
+#id-body {
+    background-image:url(/static/weibo_bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#weibo-all {
+    position: absolute;
+    left: 100px;
+}
+
+#id-button-add {
+    display: block;
+    border-style: none;
+}
+
+.weibo-box {
+    background-color: white;
+    border-style: outset;
+}
