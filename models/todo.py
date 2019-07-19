@@ -27,7 +27,9 @@ class Todo(Model):
     def add(cls, form, user_id):
         t = Todo(form)
         t.user_id = user_id
-        t.created_time = int(time.time())
+        # t.created_time = int(time.time())
+        # t.updated_time = t.created_time
+        t.created_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         t.updated_time = t.created_time
         t.save()
 

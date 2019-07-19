@@ -37,17 +37,22 @@ def login():
     # session 会话
     # token 令牌
     # 设置一个随机字符串来当令牌使用
-    session_id = random_string()
-    form = dict(
-        session_id=session_id,
-        user_id=u.id,
-    )
-    Session.new(form)
-
+    print('u== ', u)
     redirect_to_login_view = redirect('/user/login/view?result={}'.format(result))
     response = current_app.make_response(redirect_to_login_view)
-    response.set_cookie('session_id', value=session_id)
-    response.set_cookie('path', value='/')
+
+    if u.id is not None:
+        print('session add')
+        session_id = random_string()
+        form = dict(
+            session_id=session_id,
+            user_id=u.id,
+        )
+        Session.new(form)
+
+        response.set_cookie('session_id', value=session_id)
+        response.set_cookie('path', value='/')
+
     return response
 
 

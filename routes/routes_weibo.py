@@ -40,7 +40,7 @@ def index():
 #             weibo_id = request.query['id']
 #         else:
 #             weibo_id = request.form()['id']
-#         w = Weibo.find_by(id=int(weibo_id))
+#         w = Weibo.txt.find_by(id=int(weibo_id))
 #
 #         if w.user_id == u.id:
 #             return route_function(request)

@@ -1,6 +1,6 @@
 from models import Model
 from models.user import User
-# from models.weibo import Weibo
+# from models.weibo import Weibo.txt
 
 
 class Comment(Model):
@@ -27,6 +27,6 @@ class Comment(Model):
 
         return w
     # def weibo(self):
-    #     from models.weibo import Weibo
-    #     w = Weibo.find_by(id=self.weibo_id)
+    #     from models.weibo import Weibo.txt
+    #     w = Weibo.txt.find_by(id=self.weibo_id)
     # return w

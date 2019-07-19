@@ -52,6 +52,7 @@ class yuanTemplate:
 
 def current_user():
     if 'session_id' in request.cookies:
+        print('if opt')
         session_id = request.cookies['session_id']
         s = Session.find_by(session_id=session_id)
         if s is None or s.expired():
@@ -61,6 +62,7 @@ def current_user():
             u = User.find_by(id=user_id)
             return u
     else:
+        print('else opt')
         return User.guest()
 
 

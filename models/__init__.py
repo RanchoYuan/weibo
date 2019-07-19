@@ -89,7 +89,7 @@ class Model(object):
             if hasattr(m, k):
                 setattr(m, k, v)
 
-        m.updated_time = int(time.time())
+        m.updated_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
         m.save()
         return m
